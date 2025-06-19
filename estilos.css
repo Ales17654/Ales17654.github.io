@@ -499,50 +499,72 @@ footer.pie {
 }
 
 
+/* ==== Diseño responsivo para celulares (solo ajustes de estructura y tamaños) ==== */
 @media (max-width: 768px) {
-    /* Ajusta la navegación */
-    nav {
-        text-align: center;
-        padding: 15px;
-        font-size: 16px;
-        flex-direction: column;
-    }
+  .navegacion {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    padding: 10px 15px !important;
+  }
 
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
+  .menu-derecho {
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    justify-content: center !important;
+  }
 
-    /* Ajusta el contenido principal */
-    .main-content {
-        flex-direction: column;
-        padding: 10px;
-    }
+  .menu-derecho a {
+    flex: 1 1 45% !important;
+    text-align: center !important;
+    margin: 0 !important;
+    border-bottom: none !important;
+  }
 
-    .card, .seccion, .bloque {
-        width: 100% !important;
-        margin-bottom: 20px;
-    }
+  .secciones {
+    flex-direction: column !important;
+  }
 
-    /* Imágenes que se adapten al ancho */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
+  .seccion {
+    flex: 1 1 100% !important;
+    margin-bottom: 20px !important;
+  }
 
-    /* Formularios más cómodos en celular */
-    input, textarea, select, button {
-        width: 100%;
-        font-size: 16px;
-    }
+  .lista-consecuencias li, .lista-dieta li {
+    margin-bottom: 15px !important;
+  }
 
-    /* Aumenta espacio entre elementos si es necesario */
-    .espaciado {
-        margin-bottom: 20px;
-    }
+  .tabla-habitos {
+    font-size: 0.9rem !important;
+    overflow-x: auto !important;
+  }
 
-    /* Textos más grandes si es necesario */
-    h1, h2, h3, p {
-        text-align: center;
-    }
+  .video-habitos iframe {
+    width: 100% !important;
+    height: 200px !important;
+  }
+
+  .contenedor-formulario {
+    width: 100% !important;
+    padding: 15px !important;
+  }
+
+  .form-contacto input[type="text"],
+  .form-contacto input[type="email"],
+  .form-contacto textarea,
+  .form-contacto button {
+    font-size: 1rem !important;
+  }
+
+  .redes-sociales {
+    justify-content: center !important;
+    gap: 25px !important;
+  }
+
+  .redes-sociales li img {
+    width: 30px !important;
+    height: 30px !important;
+  }
 }
