@@ -499,72 +499,123 @@ footer.pie {
 }
 
 
-/* ==== Diseño responsivo para celulares (solo ajustes de estructura y tamaños) ==== */
 @media (max-width: 768px) {
+  /* Navegación: apilar vertical, centrar y dar espacio */
   .navegacion {
     flex-direction: column !important;
-    align-items: flex-start !important;
+    align-items: center !important;
     gap: 10px !important;
-    padding: 10px 15px !important;
+    padding: 15px !important;
+    width: 100% !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
   }
 
+  /* Logo centrado y más pequeño */
+  .logo-titulo {
+    font-size: 1.4em !important;
+  }
+
+  .logo-img {
+    width: 45px !important;
+  }
+
+  /* Menú derecho: apilar y centrar */
   .menu-derecho {
-    width: 100% !important;
-    display: flex !important;
     flex-wrap: wrap !important;
-    gap: 10px !important;
     justify-content: center !important;
+    gap: 12px !important;
+    width: 100% !important;
   }
 
   .menu-derecho a {
     flex: 1 1 45% !important;
-    text-align: center !important;
+    font-size: 1em !important;
     margin: 0 !important;
-    border-bottom: none !important;
+    text-align: center !important;
   }
 
+  .menu-derecho img {
+    width: 25px !important;
+    margin-right: 8px !important;
+  }
+
+  /* Main: padding arriba para no tapar con el menú fijo */
+  main {
+    margin-top: 130px !important;
+    padding: 20px 15px !important;
+  }
+
+  /* Encabezados: tamaños más pequeños */
+  .encabezado h1:nth-of-type(1) {
+    font-size: 1.8em !important;
+  }
+  .encabezado h1:nth-of-type(2) {
+    font-size: 1.2em !important;
+  }
+
+  /* Secciones: cambiar a una columna para evitar scroll horizontal */
   .secciones {
     flex-direction: column !important;
+    gap: 20px !important;
   }
 
   .seccion {
-    flex: 1 1 100% !important;
-    margin-bottom: 20px !important;
+    max-width: 100% !important;
   }
 
-  .lista-consecuencias li, .lista-dieta li {
-    margin-bottom: 15px !important;
+  /* Listas (como comida chatarra, dieta): pasar a 1 o 2 columnas según espacio */
+  .lista-consecuencias,
+  .lista-dieta {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: 20px 15px !important;
+    padding: 0 10px !important;
   }
 
+  /* Imágenes más pequeñas y adaptables */
+  .lista-consecuencias li img,
+  .lista-dieta li img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Tabla hábitos: ajustar tamaño y fuente */
   .tabla-habitos {
-    font-size: 0.9rem !important;
-    overflow-x: auto !important;
+    max-width: 100% !important;
+    font-size: 0.9em !important;
+    padding: 0 5px !important;
   }
 
+  /* Video hábitos: tamaño adaptable */
   .video-habitos iframe {
-    width: 100% !important;
-    height: 200px !important;
+    max-width: 100% !important;
+    height: 180px !important;
   }
 
+  /* Contenedor formulario: que no se salga */
   .contenedor-formulario {
     width: 100% !important;
-    padding: 15px !important;
+    max-width: 100% !important;
+    padding: 20px 15px !important;
+    box-sizing: border-box;
   }
 
-  .form-contacto input[type="text"],
-  .form-contacto input[type="email"],
+  /* Formularios: fuente y tamaño adaptables */
+  .form-contacto input,
   .form-contacto textarea,
   .form-contacto button {
-    font-size: 1rem !important;
+    font-size: 1em !important;
   }
 
-  .redes-sociales {
-    justify-content: center !important;
-    gap: 25px !important;
-  }
-
-  .redes-sociales li img {
-    width: 30px !important;
-    height: 30px !important;
+  /* Footer: que no tape contenido y tenga padding */
+  footer.pie {
+    position: relative !important;
+    bottom: auto !important;
+    width: 100% !important;
+    padding: 15px 10px !important;
+    font-size: 1em !important;
   }
 }
