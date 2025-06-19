@@ -1,0 +1,548 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 23px;
+    line-height: 1.4;
+    background-color: #1583b3;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1 0 auto;
+}
+
+
+main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    margin-top: 90px;
+}
+
+
+.navegacion {
+    background-color: #000033;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98.7%;
+    
+}
+
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+    color: #00BFFF;
+    font-size: 1.8em;
+    transition: transform 0.3s ease;
+}
+
+.logo-titulo:hover {
+    color:#ffffff;
+    transform: scale(1.1);
+}
+
+.logo-img {
+    width: 60px;
+    height: auto;
+}
+
+.menu-derecho {
+    display: flex;
+    gap: 15px;
+}
+
+.menu-derecho a {
+    text-decoration: none;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s, color 0.3s;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.menu-derecho a:hover {
+    color: yellow;
+    transform: scale(1.1);
+}
+
+.menu-derecho img {
+    width: 40px;
+    height: auto;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.menu-derecho a:hover img {
+    transform: scale(1.2);
+}
+
+
+.encabezado h1:nth-of-type(1) {
+    text-align: center;
+    font-size: 3.5em; 
+    margin: 15px 0;
+    color: yellow;
+}
+
+.encabezado h1:nth-of-type(2) {
+    text-align: center;
+    font-size: 2.7em; 
+    color: white;
+    margin: 10px 0 30px;
+}
+
+
+.secciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: nowrap;
+}
+
+.seccion {
+    flex: 1;
+    max-width: 33%;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.seccion h2 {
+    font-size: 2.4em; 
+    color: yellow;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+
+.seccion a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: yellow;
+    transition: color 0.3s ease;
+}
+
+.imagen {
+    width: 100%;
+    max-width: 600px; 
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+
+.seccion:hover .imagen {
+    transform: scale(1.05);
+}
+
+.seccion:hover h2,
+.seccion:hover a {
+    color: #1a3e8d; 
+    transform: scale(1.03);
+}
+
+
+footer.pie {
+    flex-shrink: 0;
+    background-color: #000033;
+    color: white;
+    text-align: center;
+    padding: 2px 10px;
+    font-size: 1.1em;
+    user-select: none;
+}
+
+
+
+
+
+
+.contenido-chatarra h1 {
+    text-align: center;
+    color: #FFD700; 
+    font-size: 73px;
+    margin: 10px 10px 0px;
+}
+
+
+.lista-consecuencias {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px 175px;
+    padding: 0 40px 50px;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.lista-consecuencias li {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+
+.lista-consecuencias li  {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 32px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+.lista-consecuencias li img {
+    max-width: 110%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+}
+
+
+.lista-consecuencias li:hover img {
+    transform: scale(1.17);
+}
+
+.lista-consecuencias li:hover  {
+    color: #1a3e8d;
+    transform: scale(1.08);
+}
+
+
+.contenido-dieta h1 {
+    text-align: center;
+    color: #FFD700; 
+    font-size: 73px;
+    margin: 10px 20px 40px;
+}
+
+.lista-dieta {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 200px;
+    padding: 0 40px 50px;
+    margin: 0 auto;
+    max-width: 1100px;
+    row-gap: 80px;
+}
+
+.lista-dieta li {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.lista-dieta li  {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 32px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.lista-dieta li img {
+    max-width: 165%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+}
+
+.lista-dieta li:hover img {
+    transform: scale(1.1);
+}
+
+.lista-dieta li:hover  {
+    color: #1a3e8d;
+    transform: scale(1.08);
+}
+
+
+/* ======================== */
+/* Página: habitos.html     */
+/* ======================== */
+
+/* Contenedor principal de esta sección */
+.contenido-habitos h1 {
+    text-align: center;
+    color: yellow;
+    font-size: 63px;
+    margin: 40px 0 20px;
+}
+
+/* Tabla de hábitos saludables */
+.tabla-habitos {
+    width: 100%; /* mejor evitar 150% para no romper diseño */
+    max-width: 900px;
+    margin: 20px auto 40px;
+    border-collapse: separate; /* para que funcione border-radius */
+    border-spacing: 0;
+    border: 2px solid white;
+    border-radius: 15px; /* bordes más redondeados */
+    background-color: #002f6c;
+    color: white;
+    font-size: 1.05em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* sombra más marcada */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.tabla-habitos:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    transform: scale(1.02);
+}
+
+.tabla-habitos td {
+    padding: 15px 25px;
+    border-bottom: 1px solid white;
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Última fila sin borde inferior para que quede más redondeado */
+.tabla-habitos tr:last-child td {
+    border-bottom: none;
+}
+
+/* Efecto hover en las filas */
+.tabla-habitos tr:hover td {
+    background-color: #0d58a3;
+}
+
+/* Palabras clave destacadas en amarillo */
+.tabla-habitos strong {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/* Frase motivacional */
+ .contenido-habitos p { 
+    font-size: 40px;
+    margin: 30px 0;
+    color: white;
+    text-align: center;
+}
+
+.video-habitos {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.video-habitos iframe {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.video-habitos iframe:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(3, 43, 153, 0.8);
+}
+
+
+/* CONTENEDOR PRINCIPAL DEL MAIN */
+.contenido-contacto {
+    max-width: 1000px;
+    margin: 60px auto 20px;
+    padding: 0 20px;
+}
+
+/* CAJA AZUL DEL FORMULARIO */
+.contenedor-formulario {
+    width: 150%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #00335b;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #000;
+    color: white;
+    border: 2px solid black;
+}
+
+/* TÍTULO CENTRADO */
+.contenido-contacto h1 {
+    text-align: center;
+    color: #ffd700; /* amarillo */
+    font-size: 65px;
+   
+}
+
+
+/* FORMULARIO: etiquetas */
+.form-contacto label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* FORMULARIO: inputs y textarea */
+.form-contacto input,
+.form-contacto textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 10px; /* <- aquí lo puedes reducir */
+    background-color: #001f3f;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+
+/* FORMULARIO: efectos al enfocar */
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+    outline: none;
+    border-color: #ffcc00;
+    box-shadow: 0 0 8px #ffcc00;
+}
+
+/* BOTÓN DE ENVIAR */
+.form-contacto button {
+    background-color: #ffd700;
+    color: black;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1.05em;
+}
+
+.form-contacto button:hover {
+    background-color: #e6b800;
+}
+
+.bloque-redes {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ffffff30;
+    text-align: center;
+}
+
+.bloque-redes h2 {
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    color: #ffd700;
+}
+
+.redes-sociales {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.redes-sociales li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.redes-sociales li a img {
+    width: 55px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.redes-sociales li a img:hover {
+    transform: scale(1.2);
+}
+
+/* PIE DE PÁGINA */
+.pie {
+    text-align: center;
+    padding: 20px;
+    background-color: #001f3f;
+    color: white;
+    margin-top: 40px;
+}
+
+
+@media (max-width: 768px) {
+    /* Ajusta la navegación */
+    nav {
+        text-align: center;
+        padding: 15px;
+        font-size: 16px;
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Ajusta el contenido principal */
+    .main-content {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .card, .seccion, .bloque {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    /* Imágenes que se adapten al ancho */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Formularios más cómodos en celular */
+    input, textarea, select, button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    /* Aumenta espacio entre elementos si es necesario */
+    .espaciado {
+        margin-bottom: 20px;
+    }
+
+    /* Textos más grandes si es necesario */
+    h1, h2, h3, p {
+        text-align: center;
+    }
+}
